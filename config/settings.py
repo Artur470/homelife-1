@@ -14,10 +14,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-# Добавляем localhost и IP-адрес 127.0.0.1 в ALLOWED_HOSTS
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
-
-
+# Добавляем домен и его вариант с www в ALLOWED_HOSTS
+ALLOWED_HOSTS = [
+    'artyr.unkulovv.com',
+    'www.artyr.unkulovv.com',
+]
 
 
 INSTALLED_APPS = [
