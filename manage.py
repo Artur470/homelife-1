@@ -3,6 +3,7 @@ import os
 import sys
 from decouple import config
 
+from django.core.wsgi import get_wsgi_application
 # Вывод переменных окружения для проверки
 print(f"DB_NAME: {config('DB_NAME')}")
 print(f"DB_USER: {config('DB_USER')}")
